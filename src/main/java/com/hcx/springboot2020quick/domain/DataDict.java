@@ -9,7 +9,7 @@ import lombok.Data;
  *
  * @see
  */
-@Data
+//@Data
 public class DataDict {
 
     private Long id;

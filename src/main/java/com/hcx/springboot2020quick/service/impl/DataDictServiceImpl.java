@@ -1,5 +1,6 @@
 package com.hcx.springboot2020quick.service.impl;
 
+import com.hcx.springboot2020quick.datasource.MyDataSource;
 import com.hcx.springboot2020quick.domain.DataDict;
 import com.hcx.springboot2020quick.mapper.DataDictMapper;
 import com.hcx.springboot2020quick.service.DataDictService;
@@ -19,11 +20,13 @@ public class DataDictServiceImpl implements DataDictService {
     @Autowired
     private DataDictMapper dataDictMapper;
 
+    @MyDataSource(name = "master-db")
     @Override
     public DataDict findByCode(String code) {
         return dataDictMapper.findByCode(code);
     }
 
+    @MyDataSource(name = "slave-db")
     @Override
     public DataDict findAll() {
         return dataDictMapper.findAll();

@@ -20,7 +20,6 @@ public class HelloController {
     @RequestMapping("/getProccesor/{type}")
     public List getProcessor(@PathVariable  String type){
         List typeList = commonService.getProcessor(type);
-        System.out.println(typeList);
         return typeList;
 
     }
