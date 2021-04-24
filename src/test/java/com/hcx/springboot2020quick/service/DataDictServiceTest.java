@@ -26,6 +26,7 @@ public class DataDictServiceTest {
     @Test
     public void findByCode(){
         DataDict dataDict = dataDictService.findByCode("1");
+        
         System.out.println(dataDict.getCode());
     }
 
